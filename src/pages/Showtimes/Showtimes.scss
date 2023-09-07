@@ -1,0 +1,44 @@
+@import '../../App.scss';
+
+.showtimes {
+    background-color: $mainLightColor;
+    height: calc(100vh - 9rem);
+    display: flex;
+    padding: 2rem 10rem 4rem 10rem;
+
+    .sidebar {
+        width: 25%;
+        margin-top: 100px;
+        padding-right: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+
+        h1 {
+            font-size: 4rem;
+            color: #7d7d7d;
+            transition: all 0.2s ease-in-out;
+            transform-origin: right;
+
+            &:hover {
+                transform: scale(1.1);
+                cursor: pointer;
+            }
+
+            &.selected {
+                font-size: 5rem;
+                // text-shadow: 0px 0px 10px #cccc;
+                // color: $mainDarkColor;
+
+                background-clip: text;
+                color: transparent;
+                background-image: linear-gradient(to left, rgb(255, 115, 86), rgb(251, 67, 87));
+            }
+        }
+    }
+
+    .main-content {
+        width: 75%;
+        min-height: 100%;
+    }
+}

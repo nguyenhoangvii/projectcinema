@@ -1,0 +1,11 @@
+.notFound {
+    min-height: calc(100vh - 9rem);
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    background-color: #e5e4e4;
+
+    img {
+        width: 95%;
+    }
+}

@@ -1,0 +1,135 @@
+@import '../../../App.scss';
+
+.moviesComingSoon {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 5rem;
+    padding: 2rem 4rem;
+    animation: slide 0.5s;
+    // animation: slide 0.5s;
+
+    .card {
+        width: 26rem;
+        transition: all 0.2s ease-in-out;
+
+        .img {
+            position: relative;
+            cursor: pointer;
+
+            &:hover .btn-wrapper {
+                display: flex;
+            }
+
+            img {
+                box-shadow: 0 0 2rem 0 rgba($color: #555, $alpha: 0.7);
+                width: 100%;
+                border-radius: 3rem;
+            }
+
+            .btn-wrapper {
+                position: absolute;
+                top: 0rem;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                display: flex;
+                gap: 1rem;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                background-color: rgba($color: #000000, $alpha: 0.5);
+                border-radius: 3rem;
+                backdrop-filter: blur(3px);
+                opacity: 0;
+                transform: translateY(-2rem);
+                transition: all 0.2s linear;
+
+                &:hover {
+                    opacity: 1;
+                    top: 0;
+                    transform: translateY(0);
+                }
+
+                .btn {
+                    padding: 1.2rem 4.4rem;
+                    font-size: 1.6rem;
+                    font-weight: 700;
+                    width: fit-content;
+                    min-width: 160px;
+                    cursor: pointer;
+                    box-shadow: 0 0 3rem 0 rgba($color: #000000, $alpha: 0.5);
+                    border-radius: 0.8rem;
+                    position: relative;
+                    transition: all 0.2s ease-in-out;
+
+                    &:hover {
+                        opacity: 0.9;
+                        transform: scale(1.03);
+                    }
+                }
+
+                .btn-white {
+                    background-color: transparent;
+                    color: $mainDarkColor;
+                    border: none;
+                    border: 2px solid #fff;
+                    color: #fff;
+
+                    &:hover {
+                        background-color: #fff;
+                        color: $mainDarkColor;
+                    }
+                }
+
+                .btn-gradient {
+                    background: linear-gradient(to left, rgb(255, 115, 86), rgb(251, 67, 87));
+                    color: white;
+                    border: none;
+
+                    // padding: calc(1rem + 2px) calc(4rem + 2px);
+                    &:hover {
+                        background: #fff;
+                        color: $mainDarkColor;
+                    }
+                }
+            }
+        }
+
+        .name {
+            font-size: 2.6rem;
+            padding: 1rem 0 0.3rem 0;
+
+            overflow: hidden;
+            text-overflow: ellipsis; //Thêm dấu "..." nếu văn bản bị cắt.
+            display: -webkit-box;
+            -webkit-line-clamp: 2; //Giới hạn số dòng hiển thị là 1
+            -webkit-box-orient: vertical; //Chỉ định hướng của box là dọc (theo chiều dọc).
+
+        }
+
+        .sub-name {
+            font-size: 1.8rem;
+            overflow: hidden;
+            text-overflow: ellipsis; //Thêm dấu "..." nếu văn bản bị cắt.
+            display: -webkit-box;
+            -webkit-line-clamp: 1; //Giới hạn số dòng hiển thị là 1
+            -webkit-box-orient: vertical; //Chỉ định hướng của box là dọc (theo chiều dọc).
+        }
+
+        &:hover {
+            transform: scale(1.05);
+        }
+    }
+}
+
+@keyframes slide {
+    from {
+        opacity: 0;
+        transform: translateX(-5rem);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}

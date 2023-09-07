@@ -1,0 +1,195 @@
+@import '../../App.scss';
+
+.movieDetail {
+    background-color: $mainLightColor;
+    color: $mainDarkColor;
+
+    .header {
+        position: relative;
+        padding: 2rem 12rem;
+        // overflow-x: hidden;
+        height: calc(100vh - 9rem);
+        display: flex;
+        // justify-content: center;
+
+        // flex-wrap: wrap;
+        // flex-direction: row-reverse;
+
+
+        .header-img {
+            // width: 40%;
+            margin-right: 6rem;
+            margin-bottom: 3rem;
+            flex-shrink: 0;
+            position: relative;
+            cursor: pointer;
+            transition: all 0.3s;
+
+
+            // top: 0;
+            // left: 30px;
+            &:hover {
+                transform: scale(1.02);
+
+                .play-button {
+                    opacity: 1;
+                }
+            }
+
+            img {
+                // width: 80%;
+                height: 100%;
+                border-radius: 2.2rem;
+                box-shadow: -1rem 1rem 3rem 0 #949494;
+            }
+
+            .play-button {
+                position: absolute;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                z-index: 2;
+                font-size: 10rem;
+                color: $mainLightColor;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background-color: rgba($color: #000000, $alpha: 0.5);
+                border-radius: 2.2rem;
+                opacity: 0;
+                transition: all 0.3s;
+            }
+        }
+
+        .bg-blur {
+            position: absolute;
+            background-repeat: no-repeat;
+            background-size: 200%;
+            background-position: center;
+            top: 0rem;
+            left: -10rem;
+            right: -10rem;
+            height: 100%;
+
+            // z-index: -1;
+            opacity: 0.2;
+            filter: blur(5rem);
+        }
+
+        .header-content-wrapper {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            position: inherit;
+            // padding-right: 400px;
+            padding-bottom: 100px;
+            // z-index: 1;
+            // width: 60%;
+            flex-grow: 1;
+            // background: transparent;
+            // background-color: rgba($mainLightColor, 0);
+
+            .h1-title {
+                font-size: 6rem;
+                line-height: 6rem;
+                margin-bottom: 1rem;
+                // color: #383838;
+
+                background-clip: text;
+                color: transparent;
+                background-image: linear-gradient(to left, rgb(255, 115, 86), rgb(251, 67, 87));
+
+                //Đoạn css sau để giới hạn 1 dòng
+                overflow: hidden;
+                text-overflow: ellipsis; //Thêm dấu "..." nếu văn bản bị cắt.
+                display: -webkit-box;
+                -webkit-line-clamp: 2; //Giới hạn số dòng hiển thị là 1
+                -webkit-box-orient: vertical; //Chỉ định hướng của box là dọc (theo chiều dọc).
+            }
+
+            .h2-title {
+                color: #5c5c5c;
+                font-size: 3rem;
+            }
+
+            p.other-info {
+                margin-top: 1.5rem;
+                width: fit-content;
+                padding: 1rem;
+                background-color: rgba($color: #ffffff, $alpha: 0.8);
+                border-radius: 2rem;
+
+                span {
+                    font-size: 2rem;
+                    padding: 0 2rem;
+                    border-right: 2px solid grey;
+
+                    b {
+                        color: #fd5c56;
+                    }
+                }
+
+                span:last-of-type {
+                    border-right: none;
+                }
+            }
+
+            .desc-wrapper {
+                margin-top: 30px;
+
+                span,
+                p,
+                a {
+                    // background: $mainLightColor !important;
+                    background: none !important;
+                    color: $mainDarkColor !important;
+                    font-family: "Roboto Condensed", sans-serif !important;
+                    font-size: 2.2rem !important;
+                    text-decoration: none;
+                }
+
+                p {
+                    padding: 1rem 0;
+                }
+            }
+
+            .main-btn-wrapper {
+                margin-top: 3rem;
+                z-index: 1;
+                display: flex;
+                gap: 1.2rem;
+
+                .btn {
+                    padding: 1.2rem 4.4rem;
+                    font-size: 2rem;
+                    font-weight: 700;
+                    min-width: 17rem;
+                    cursor: pointer;
+                    box-shadow: 0 0 3rem 0 #bebebe;
+                    border-radius: 3rem;
+                }
+
+                .btn-white {
+                    background-color: white;
+                    color: $mainDarkColor;
+                    border: none;
+                    opacity: 0.8;
+                }
+
+                .btn-gradient {
+                    background-image: linear-gradient(to left, rgb(255, 115, 86), rgb(251, 67, 87));
+                    color: white;
+                    border: none;
+                    // padding: calc(1rem + 2px) calc(4rem + 2px);
+                }
+            }
+
+        }
+    }
+
+    .main-content {
+        // z-index: 2;
+        // background-color: white;
+    }
+
+}

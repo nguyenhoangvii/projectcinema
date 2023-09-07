@@ -1,0 +1,68 @@
+@import '../../App.scss';
+
+.footer {
+    min-height: 50rem;
+    background-color: $mainDarkColor;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    img {
+        width: 20rem;
+    }
+
+    .link-wrapper {
+        display: flex;
+        gap: 3rem;
+        padding: 2rem 0;
+
+        a {
+            text-decoration: none;
+            color: #c2c2c2;
+            font-weight: 700;
+            transition: all 0.2s;
+
+            &:hover {
+                transform: scale(1.1);
+            }
+        }
+    }
+
+    .icons-wrapper {
+        display: flex;
+        gap: 3rem;
+        font-size: 2rem;
+        background-clip: text;
+        color: transparent;
+        background-image: linear-gradient(to left, rgb(255, 115, 86), rgb(251, 67, 87));
+        margin: 2rem 0 8rem;
+
+        span {
+            border: 2px solid #fc5057;
+            width: 4.8rem;
+            height: 4.8rem;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            transition: all 0.2s;
+
+            i {
+                vertical-align: middle;
+            }
+
+            &:hover {
+                color: white;
+                border: 2px solid white;
+                transform: scale(1.1);
+            }
+        }
+    }
+
+    p {
+        color: #c2c2c2;
+        letter-spacing: 1px;
+    }
+}

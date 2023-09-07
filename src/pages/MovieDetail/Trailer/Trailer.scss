@@ -1,0 +1,18 @@
+@import '../../../App.scss';
+
+.trailer {
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 5rem 0;
+    min-height: calc(100vh - 9rem);
+
+    .h1-title {
+        font-size: 6rem;
+        background-clip: text;
+        color: transparent;
+        background-image: linear-gradient(to left, rgb(255, 115, 86), rgb(251, 67, 87));
+        padding-bottom: 2rem;
+    }
+}

@@ -1,0 +1,101 @@
+@import '../../../App.scss';
+
+.ticket {
+    padding: 8rem;
+    // padding-right: 12rem;
+    max-height: calc(100vh - 9rem);
+    overflow: auto;
+
+
+    >h1 {
+        font-size: 5rem;
+        background-clip: text;
+        color: $mainDarkColor;
+        margin-bottom: 5rem;
+        text-transform: uppercase;
+        border-left: 5px solid $mainDarkColor;
+        padding-left: 2rem;
+        animation: fadeIn 0.7s;
+    }
+
+    .cards-wrapper {
+        display: grid;
+        gap: 6rem;
+        // grid-template-columns: 1fr 1fr;
+        grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+        animation: slideLeftToRight 0.5s;
+
+        .card {
+            display: flex;
+            background: #f2f2f2;
+            border-radius: 3rem;
+            height: 28.5rem;
+            box-shadow: 0 0 2rem 0 rgba($color: #555, $alpha: 0.3);
+            overflow: hidden;
+            transition: all 0.3s;
+
+            &:hover {
+                cursor: pointer;
+                transform: scale(1.05);
+            }
+
+            img {
+                height: 100%;
+            }
+
+            .ticket-info-wrapper {
+                flex-grow: 1;
+                padding: 1rem 3rem;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                overflow: auto;
+
+                h3 {
+                    font-size: 3rem;
+                    line-height: 3rem;
+                    margin-bottom: 1rem;
+                }
+
+                p {
+                    font-size: 1.8rem;
+                    line-height: 130%;
+                }
+            }
+
+        }
+    }
+
+    .no-ticket-noti-wrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 50rem;
+        gap: 2rem;
+
+        .btn {
+            padding: 1.2rem 4.4rem;
+            font-size: 2rem;
+            font-weight: 700;
+            min-width: 17rem;
+            cursor: pointer;
+            box-shadow: 0 0 3rem 0 #bebebe;
+            border-radius: 3rem;
+        }
+
+        .btn-white {
+            background-color: white;
+            color: $mainDarkColor;
+            border: none;
+            opacity: 0.8;
+        }
+
+        .btn-gradient {
+            background-image: linear-gradient(to left, rgb(255, 115, 86), rgb(251, 67, 87));
+            color: white;
+            border: none;
+            // padding: calc(1rem + 2px) calc(4rem + 2px);
+        }
+    }
+}

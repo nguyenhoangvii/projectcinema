@@ -1,0 +1,73 @@
+@import '../../../App.scss';
+
+.changeInformation {
+    padding: 8rem;
+    min-height: calc(100vh - 9rem);
+
+    >h1 {
+        font-size: 5rem;
+        background-clip: text;
+        color: $mainDarkColor;
+        margin-bottom: 5rem;
+        text-transform: uppercase;
+        border-left: 5px solid $mainDarkColor;
+        padding-left: 2rem;
+        animation: fadeIn 0.7s;
+    }
+
+    .form-wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 50rem;
+        animation: slideLeftToRight 0.5s;
+
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+
+            .noti-wrapper {
+                min-height: 3rem;
+                margin-top: 1rem;
+
+                span.noti-success {
+                    font-size: 1.8rem;
+                    color: #368400;
+                }
+
+                span.noti-success {
+                    font-size: 1.8rem;
+                    color: #368400;
+                }
+            }
+
+            input {
+                font-size: 1.6rem;
+                background-color: #eee;
+                border: none;
+                padding: 1rem 2rem;
+                margin: 8px 0;
+                width: 30rem;
+                border-radius: 2rem;
+            }
+
+            button {
+                width: fit-content;
+                align-self: center;
+                margin-top: 2rem;
+                border-radius: 20px;
+                border: 1px solid #FF4B2B;
+                background: $gradient;
+                color: #FFFFFF;
+                font-size: 1.4rem;
+                font-weight: bold;
+                padding: 1.1rem 4rem;
+                letter-spacing: 1px;
+                text-transform: uppercase;
+                transition: transform 80ms ease-in;
+            }
+        }
+    }
+}

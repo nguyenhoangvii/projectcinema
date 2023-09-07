@@ -1,0 +1,131 @@
+@import '../../App.scss';
+
+.user {
+    display: flex;
+    background-color: $mainLightColor;
+
+    .side-bar {
+        padding: 5rem 0 0 7rem;
+        width: 30%;
+        min-height: calc(100vh - 9rem);
+        background-color: $mainLightColor;
+        display: flex;
+        flex-direction: column;
+        flex-shrink: 0;
+
+        .user-info {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            padding-right: 6rem;
+
+            .avatar {
+                border-radius: 50%;
+                overflow: hidden;
+                width: fit-content;
+                margin-bottom: 2rem;
+                border: 0.4rem solid #fff;
+                width: 14rem;
+                height: 14rem;
+
+                img {
+                    width: 100%;
+                }
+            }
+
+            h2.user-name {
+                font-size: 3.2rem;
+            }
+
+            h2.user-email {
+                font-weight: normal;
+                color: #595959;
+            }
+        }
+
+        .menu-wrapper {
+            align-self: flex-end;
+
+            .menu {
+                background-color: $mainLightColor;
+                padding: 50px 0 50px 15px;
+                width: 30rem;
+            }
+
+            .menu-item {
+                padding: 15px;
+                border-radius: 12px 0 0 12px;
+                display: flex;
+                align-items: center;
+                color: #414141;
+                font-size: 1.8rem;
+                cursor: pointer;
+                position: relative;
+                margin-bottom: 10px;
+
+                i {
+                    min-width: 2.5rem;
+                }
+
+                &:hover {
+
+                    i,
+                    span {
+                        transition: all 0.3s;
+                        font-weight: bold;
+                        transform: scale(1.1);
+                        transform-origin: left
+                    }
+                }
+
+                span {
+                    display: inline-block;
+                    margin-left: 1.6rem;
+                }
+
+                &.active {
+                    background-color: $subLightColor;
+                    color: #fb4357;
+                    font-weight: 700;
+                }
+
+                &.active:before {
+                    content: "";
+                    width: 20px;
+                    height: 20px;
+                    background-color: $mainLightColor;
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    border-radius: 50%;
+                    transform: translateY(-100%);
+                    box-shadow: 10px 10px 0 0 $subLightColor;
+                    transition: all 0.3s;
+
+                }
+
+                &.active:after {
+                    content: "";
+                    width: 20px;
+                    height: 20px;
+                    background-color: $mainLightColor;
+                    position: absolute;
+                    bottom: 0;
+                    right: 0;
+                    border-radius: 50%;
+                    transform: translateY(100%);
+                    box-shadow: 10px -10px 0 0 $subLightColor;
+                    transition: all 0.3s;
+
+                }
+            }
+        }
+    }
+
+    .main-content {
+        flex-grow: 1;
+        background-color: $subLightColor;
+        border-top-left-radius: 2rem;
+    }
+
+}
