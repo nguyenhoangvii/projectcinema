@@ -1,0 +1,18 @@
+{
+  "files": {
+    "main.css": "/nguyenhoangvii/projectcinema/static/css/main.b58ed86c.css",
+    "main.js": "/nguyenhoangvii/projectcinema/static/js/main.3ce7d1d4.js",
+    "static/media/404.png": "/nguyenhoangvii/projectcinema/static/media/404.a28be5692623c719903d.png",
+    "static/media/Visa.png": "/nguyenhoangvii/projectcinema/static/media/Visa.ede95a23f3bfc03abd95.png",
+    "static/media/chip.png": "/nguyenhoangvii/projectcinema/static/media/chip.be2aff4f7382c58ed3b3.png",
+    "static/media/Logo.png": "/nguyenhoangvii/projectcinema/static/media/Logo.504a1061978f21814b3c.png",
+    "static/media/Logo_White.png": "/nguyenhoangvii/projectcinema/static/media/Logo_White.993048f705ac3ade0c37.png",
+    "index.html": "/nguyenhoangvii/projectcinema/index.html",
+    "main.b58ed86c.css.map": "/nguyenhoangvii/projectcinema/static/css/main.b58ed86c.css.map",
+    "main.3ce7d1d4.js.map": "/nguyenhoangvii/projectcinema/static/js/main.3ce7d1d4.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.b58ed86c.css",
+    "static/js/main.3ce7d1d4.js"
+  ]
+}
